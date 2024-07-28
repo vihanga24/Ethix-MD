@@ -35,14 +35,14 @@ const video = async (m, Matrix) => {
             document: Buffer.from(responseBuffer.data),
             mimetype: 'video/mp4',
             fileName: `${videoInfo.title}.mp4`,
-            caption: `> ${videoInfo.title}\n> © Powered by 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿`,
+            caption: `> ${videoInfo.title}\n> © Powered by ISSEI - KUN`,
           };
           await Matrix.sendMessage(m.from, docMessage, { quoted: m });
         } else {
           const videoMessage = {
             video: Buffer.from(responseBuffer.data),
             mimetype: 'video/mp4',
-            caption: `> ${videoInfo.title}\n> © POWERED BY 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿`,
+            caption: `> ${videoInfo.title}\n> © POWERED BY ISSEI - KUN`,
           };
           await Matrix.sendMessage(m.from, videoMessage, { quoted: m });
         }
