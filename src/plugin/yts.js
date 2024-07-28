@@ -86,10 +86,10 @@ const song = async (m, Matrix) => {
             },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `*𝞢𝙏𝞖𝞘𝞦-𝞛𝘿 VIDEO DOWNLOADER*\n\n> *TITLE:* _${videoInfo.title}_\n> *AUTHOR:* _${videoInfo.author}_\n> *DURATION:* _${videoInfo.duration}_\n> *VIEWS:* _${videoInfo.views}_\n> *URL:* _${videoInfo.url}_`
+                text: `*ISSEI - KUN VIDEO DOWNLOADER*\n\n> *TITLE:* _${videoInfo.title}_\n> *AUTHOR:* _${videoInfo.author}_\n> *DURATION:* _${videoInfo.duration}_\n> *VIEWS:* _${videoInfo.views}_\n> *URL:* _${videoInfo.url}_`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By Ethix-MD"
+                text: "© Powered By ISSEI - KUN"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: videoInfo.thumbnail } }, { upload: Matrix.waUploadToServer })),
@@ -191,7 +191,7 @@ const song = async (m, Matrix) => {
               {
                 video: buffer,
                 mimetype: 'video/mp4',
-                caption: `> *TITLE:* ${selectedVideo.title}\n> *AUTHOR:* ${selectedVideo.author.name}\n> *DURATION:* ${selectedVideo.timestamp}\n\n> *POWERED BY Ethix-MD*`,
+                caption: `> *TITLE:* ${selectedVideo.title}\n> *AUTHOR:* ${selectedVideo.author.name}\n> *DURATION:* ${selectedVideo.timestamp}\n\n> *POWERED BY ★彡[ᴠɪʜᴀɴɢᴀ.xx]彡★*`,
               },
               { quoted: m }
             );
