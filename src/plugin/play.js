@@ -67,9 +67,9 @@ const playcommand = async (m, Matrix) => {
             messageContextInfo: { deviceListMetadata: {}, deviceListMetadataVersion: 2 },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `*ETHIX-MD YOUTUBE SEARCH*\n\n> *TITLE:* ${currentResult.title}\n> *AUTHOR:* ${currentResult.author.name}\n> *VIEWS:* ${currentResult.views}\n> *DURATION:* ${currentResult.timestamp}\n> *YTLINK:* ${url}\n`
+                text: `*Issei - Kun YOUTUBE SEARCH*\n\n> *TITLE:* ${currentResult.title}\n> *AUTHOR:* ${currentResult.author.name}\n> *VIEWS:* ${currentResult.views}\n> *DURATION:* ${currentResult.timestamp}\n> *YTLINK:* ${url}\n`
               }),
-              footer: proto.Message.InteractiveMessage.Footer.create({ text: "© Powered By 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿" }),
+              footer: proto.Message.InteractiveMessage.Footer.create({ text: "© Powered By ISSEI - KUN" }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: thumbnailUrl } }, { upload: Matrix.waUploadToServer })),
                 title: "",
@@ -122,9 +122,9 @@ const playcommand = async (m, Matrix) => {
             messageContextInfo: { deviceListMetadata: {}, deviceListMetadataVersion: 2 },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `*ETHIX-MD YOUTUBE SEARCH*\n\n> *🔍TITLE:* ${currentResult.title}\n> *AUTHOR:* ${currentResult.author.name}\n> *VIEWS:* ${currentResult.views}\n> *DURATION:* ${currentResult.timestamp}\n> *YTLINK:* ${url}`
+                text: `*ISSEI - KUN YOUTUBE SEARCH*\n\n> *🔍TITLE:* ${currentResult.title}\n> *AUTHOR:* ${currentResult.author.name}\n> *VIEWS:* ${currentResult.views}\n> *DURATION:* ${currentResult.timestamp}\n> *YTLINK:* ${url}`
               }),
-              footer: proto.Message.InteractiveMessage.Footer.create({ text: "© Powered By 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿" }),
+              footer: proto.Message.InteractiveMessage.Footer.create({ text: "© Powered By ISSEI - KUN" }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: thumbnailUrl } }, { upload: Matrix.waUploadToServer })),
                 title: "",
@@ -186,7 +186,7 @@ const playcommand = async (m, Matrix) => {
               content = {
                 video: buffer,
                 mimetype: 'video/mp4',
-                caption: `> TITLE: ${selectedMedia.title}\n\n*Downloaded by 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿*`
+                caption: `> TITLE: ${selectedMedia.title}\n\n*Downloaded by ISSEI - KUN*`
               };
               await Matrix.sendMessage(m.from, content, { quoted: m });
             } else if (type === 'audiodoc' || type === 'videodoc') {
@@ -194,7 +194,7 @@ const playcommand = async (m, Matrix) => {
                 document: buffer,
                 mimetype: type === 'audiodoc' ? 'audio/mpeg' : 'video/mp4',
                 fileName: `${selectedMedia.title}.${type === 'audiodoc' ? 'mp3' : 'mp4'}`,
-                caption: `*Downloaded by 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿*`,
+                caption: `*Downloaded by ISSEI - KUN*`,
                 contextInfo: {
                   externalAdReply: {
                     showAdAttribution: true,
