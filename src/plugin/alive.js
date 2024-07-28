@@ -12,13 +12,14 @@ const alive = async (m, Matrix) => {
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
     if (['alive', 'uptime', 'runtime'].includes(cmd)) {
 
-  const uptimeMessage = `*🤖 ETHIX-MD Status Overview*
+  const uptimeMessage = `*🤖 ISSEI-KUN Status Overview*
 _________________________________________
 
 *📆 ${days} Day*
 *🕰️ ${hours} Hour*
 *⏳ ${minutes} Minute*
 *⏲️ ${seconds} Second*
+ɪꜱꜱᴇɪ - ᴋᴜɴ
 _________________________________________
 `;
 
@@ -51,7 +52,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© Powered By 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿"
+            text: "© Powered By ɪꜱꜱᴇɪ - ᴋᴜɴ"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
